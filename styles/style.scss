@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+$color-dark: #282727;
+$color-red: rgb(255, 0, 0);
+
+*,
+*::after, 
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto Mono", serif;
+  font-weight: 500;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+    font-size: 1.7rem;
+    border: 1px solid $color-dark;
+    border-radius: 1.2rem;
+    font-size: 2.5rem;
+    padding: 2rem 3rem;
+    box-shadow: 0.1rem 0.1rem 1rem 0.1rem black;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid $color-dark;
+    }
+    
+    .form-control {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        font-size: 2rem;
+        
+        input {
+            font-size: 2rem;
+            border: 1px solid $color-dark;
+            border-radius: 0.5rem;
+            text-align: center;
+            padding: 0.5rem;
+        }        
+        small {
+            color: $color-red;
+            visibility: hidden;
+            margin-top: -1rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .form-control input:focus {
+        outline: 0;
+        border-color: #777;
+    }
+
+    .form-control.success input {
+        border-color: green;
+    }
+
+    .form-control.error input {
+        border-color: red;
+    }
+
+    .form-control.error small {
+        visibility: visible;
+    }
+
+    .btn {
+        padding: 1.2rem 2rem;
+        font-size: 1.8rem;
+        width: 100%;
+        border: 1px solid $color-dark;
+        border-radius: 1.2rem;
+        background: rgb(36,0,0);
+        background: linear-gradient(100deg, rgba(36,0,0,0) 0%, grey 100%);
+    }
+    .btn:hover,
+    .btn:active {
+        scale: 1.05;
+        background: rgb(36,0,0);
+        background: linear-gradient(-100deg, rgba(36,0,0,0) 0%, grey 100%);
+    }
+}
